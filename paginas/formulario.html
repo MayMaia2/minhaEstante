@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Estante</title>
+    <link rel="short icon" href="../image/abra-o-livro.png">
+    <link rel="stylesheet" href="../styles/formulario.css">
+
+</head>
+
+<body>
+    <header>
+        <figure>
+            <img class="logo" src="../image/abra-o-livro.png">
+        </figure>
+        <h1>Minha Estante</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li>
+                <a href="../index.html">Boas-vindas</a>
+            </li>
+
+            <li>
+                <a href="livrosLidos.html">Livros Lidos</a>
+
+                <ul>
+                    <li>
+                        <a href="noAno.html">No Ano</a>
+                    </li>
+
+                    <li>
+                        <a href="naVida.html">Na Vida</a>
+                    </li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="minhaLista.html">Minha Lista</a>
+
+                <ul>
+                    <li>
+                        <a href="comprados.html">Comprados</a>
+                    </li>
+
+                    <li>
+                        <a href="paraComprar.html">Para Comprar</a>
+                    </li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="formulario.html">Formulário</a>
+            </li>
+        </ul>
+    </nav>
+
+    <main>
+        <form id="formulario" method="post">
+            <fieldset>
+                <legend>Cadastrar novo livro</legend>
+
+                <label for="lbTitulo">Título:</label>
+                <input type="text" id="ipTitulo" name="ipTitulo" required>
+
+                <label for="lbAutor">Autor:</label>
+                <input type="text" id="ipAutor" name="ipAutor" required>
+
+                <label for="lbGenero">Gênero:</label>
+                <select name="slGenero" id="slGenero">
+                    <option value="" selected disabled>Selecione</option>
+                    <option value="romance">Romance</option>
+                    <option value="fantasia">Fantasia</option>
+                    <option value="romantasia">Romantasia</option>
+                    <option value="misterio">Mistério</option>
+                    <option value="biografia">Biografia</option>
+                    <option value="terror">Terror</option>
+                    <option value="distopia">Distopia</option>
+                    <option value="outro">Outro</option>
+                </select>
+
+                <label for="lbPreco">Preço:</label>
+                <input type="number" id="ipPreco" name="ipPreco" step="0.01">
+
+                <label for="lbPreco">Já foi lido?</label>
+                <select name="slLido" id="slLido">
+                    <option value="" selected disabled>Selecione</option>
+                    <option value="sim">Sim</option>
+                    <option value="nao">Não</option>
+                </select>
+
+                <label for="lbObservacao">Observação:</label>
+                <textarea name="taObservacao" id="taObservacao" rows="5"></textarea>
+
+                <section class="botoes">
+                    <button onclick="enviarDadosForm(event)">Enviar</button>
+
+                    <button type="reset">Limpar</button>
+                </section>
+
+            </fieldset>
+            <br>
+            <br>
+
+        </form>
+
+        <section id="resultadoLivro">
+
+            <article id="livroCadastrado">
+
+                <h2 id="resposta"></h2>
+
+                <h3 id="pTitulo"></h3>
+
+                <p id="pAutor"></p>
+                <p id="pGenero"></p>
+                <p id="pPreco"></p>
+                <p id="pLido"></p>
+                <p id="pObservacao"></p>
+
+            </article>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>Se quiser entrar em contato para compartilharmos livros!</p>
+        <address>
+            E-mail: maymaiaa@gmail.com <br>
+            Tel: (11) 98816-4535
+            <br>
+        </address>
+    </footer>
+
+    <script src="../script/form.js"></script>
+
+</body>
+
+</html>
